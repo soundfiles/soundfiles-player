@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation - SoundFiles.eu Player Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px; background: #f4f7f9; }
+        .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        h1 { color: #105b81; border-bottom: 2px solid #105b81; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 30px; border-left: 5px solid #105b81; padding-left: 15px; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #d63384; }
+        .example { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 15px 0; }
+        .tag { display: inline-block; background: #105b81; color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; margin-right: 5px; }
+        .footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #777; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>SoundFiles.eu Player Pro v5.1</h1>
+    <p>This plugin enables automatic integration of the <strong>SoundFiles.eu</strong> audio player directly onto your WordPress website.</p>
+
+    <h2>1. Installation</h2>
+    <ul>
+        <li>Ensure the plugin folder is named <code>soundfiles-player</code>.</li>
+        <li>Upload the folder to the <code>/wp-content/plugins/</code> directory.</li>
+        <li>Activate the plugin through the 'Plugins' menu in WordPress.</li>
+    </ul>
+
+    <h2>2. Usage Methods</h2>
+    
+    <h3>A. Automatic Link Replacement</h3>
+    <p>Simply paste a direct file link into your post content. The plugin will detect it and convert it into a player:</p>
+    <div class="example">https://soundfiles.eu/FILE_ID/file</div>
+
+    <h3>B. Shortcode [soundfile]</h3>
+    <p>For more control, use the shortcode. You can insert it into posts, pages, or widgets.</p>
+    
+    <ul>
+        <li><strong>Standard:</strong> <code>[soundfile id="FILE_ID"]</code></li>
+        <li><strong>Custom Color:</strong> <code>[soundfile id="ID" color="#ff0000"]</code></li>
+        <li><strong>Custom Width:</strong> <code>[soundfile id="ID" width="500px"]</code></li>
+        <li><strong>Custom Button Text:</strong> <code>[soundfile id="ID" text="DOWNLOAD NOW"]</code></li>
+    </ul>
+
+    <h2>3. Global Configuration</h2>
+    <p>Navigate to <strong>Settings &raquo; SoundFiles Player</strong> to define default parameters for all players:</p>
+    <ul>
+        <li><strong>Color:</strong> Changes the color of the Play button, waveform, and download button.</li>
+        <li><strong>Width:</strong> Sets the default player size (recommended: <code>800px</code> or <code>100%</code>).</li>
+        <li><strong>Button Text:</strong> The global label for the download button.</li>
+        <li><strong>Download Toggle:</strong> Allows you to show or hide the download button below the player.</li>
+    </ul>
+
+    <h2>4. Troubleshooting</h2>
+    <ul>
+        <li><strong>Player width is not changing:</strong> After saving settings, always refresh your page using <code>Ctrl + F5</code> (force cache clear).</li>
+        <li><strong>Player is aligned to the left:</strong> The plugin uses <em>Flexbox</em> for centering. Ensure your theme does not block <code>!important</code> styles.</li>
+        <li><strong>PHP Error:</strong> This plugin requires PHP version 7.4 or higher.</li>
+    </ul>
+</div>
+
+<div class="footer">
+    &copy; 2026 SoundFiles.eu Plugin Documentation. All rights reserved.
+</div>
+
+</body>
+</html>

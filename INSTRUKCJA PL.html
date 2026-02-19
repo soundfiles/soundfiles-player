@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dokumentacja - SoundFiles.eu Player Pro</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 40px; background: #f4f7f9; }
+        .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); }
+        h1 { color: #105b81; border-bottom: 2px solid #105b81; padding-bottom: 10px; }
+        h2 { color: #2c3e50; margin-top: 30px; border-left: 5px solid #105b81; padding-left: 15px; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #d63384; }
+        .example { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 6px; overflow-x: auto; margin: 15px 0; }
+        .tag { display: inline-block; background: #105b81; color: white; padding: 2px 10px; border-radius: 12px; font-size: 0.85em; margin-right: 5px; }
+        .footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #777; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>SoundFiles.eu Player Pro v5.1</h1>
+    <p>Wtyczka umożliwia automatyczną integrację odtwarzacza audio z serwisu <strong>SoundFiles.eu</strong> bezpośrednio na Twojej stronie WordPress.</p>
+
+    <h2>1. Instalacja</h2>
+    <ul>
+        <li>Upewnij się, że folder wtyczki nazywa się <code>soundfiles-player</code>.</li>
+        <li>Wgraj folder do katalogu <code>/wp-content/plugins/</code>.</li>
+        <li>Aktywuj wtyczkę w panelu administracyjnym WordPress.</li>
+    </ul>
+
+    <h2>2. Metody publikacji</h2>
+    
+    <h3>A. Automatyczna zamiana linków</h3>
+    <p>Wystarczy wkleić w treści posta czysty link do pliku. Wtyczka wykryje go i zamieni na player:</p>
+    <div class="example">https://soundfiles.eu/ID_PLIKU/file</div>
+
+    <h3>B. Shortcode [soundfile]</h3>
+    <p>Dla większej kontroli użyj krótkiego kodu. Możesz go wstawić w treści wpisu lub widgetach.</p>
+    
+    <ul>
+        <li><strong>Standardowy:</strong> <code>[soundfile id="ID_PLIKU"]</code></li>
+        <li><strong>Z własnym kolorem:</strong> <code>[soundfile id="ID" color="#ff0000"]</code></li>
+        <li><strong>Z własną szerokością:</strong> <code>[soundfile id="ID" width="500px"]</code></li>
+        <li><strong>Z własnym napisem na przycisku:</strong> <code>[soundfile id="ID" text="NAZWA PRZYCISKU"]</code></li>
+    </ul>
+
+    <h2>3. Konfiguracja Globalna</h2>
+    <p>W menu <strong>Ustawienia &raquo; SoundFiles Player</strong> możesz zdefiniować domyślne parametry dla wszystkich odtwarzaczy:</p>
+    <ul>
+        <li><strong>Kolor:</strong> Zmienia kolor przycisku Play, fali dźwiękowej oraz przycisku pobierania.</li>
+        <li><strong>Szerokość:</strong> Określa domyślny rozmiar playera (zalecane <code>800px</code> lub <code>100%</code>).</li>
+        <li><strong>Tekst przycisku:</strong> Globalny napis na przycisku pobierania.</li>
+        <li><strong>Przełącznik Download:</strong> Pozwala ukryć przycisk pobierania pod odtwarzaczem.</li>
+    </ul>
+
+    <h2>4. Rozwiązywanie problemów</h2>
+    <ul>
+        <li><strong>Player nie zmienia szerokości:</strong> Po zmianie ustawień zawsze odśwież stronę używając <code>Ctrl + F5</code> (twarde odświeżanie cache).</li>
+        <li><strong>Player jest po lewej stronie:</strong> Wtyczka używa technologii <em>Flexbox</em>. Upewnij się, że Twój motyw nie blokuje stylów <code>!important</code>.</li>
+        <li><strong>Błąd PHP:</strong> Wtyczka wymaga PHP w wersji minimum 7.4.</li>
+    </ul>
+</div>
+
+<div class="footer">
+    &copy; 2026 SoundFiles.eu Plugin Documentation. Wszystkie prawa zastrzeżone.
+</div>
+
+</body>
+</html>

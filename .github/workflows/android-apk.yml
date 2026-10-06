@@ -46,17 +46,20 @@ jobs:
         with:
           gradle-version: '8.10.2'
 
-      - name: Build debug APK
+      - name: Build optimized release APK
         working-directory: android
-        run: gradle --no-daemon --stacktrace :app:assembleDebug
+        run: gradle --no-daemon --stacktrace :app:assembleRelease
 
       - name: Rename APK
-        run: cp android/app/build/outputs/apk/debug/app-debug.apk UlubMP3-debug.apk
+        run: cp android/app/build/outputs/apk/release/app-release.apk UlubMP3-release-slim.apk
+
+      - name: Show APK size
+        run: ls -lh UlubMP3-release-slim.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: UlubMP3-debug-apk
-          path: UlubMP3-debug.apk
+          name: UlubMP3-release-slim-apk
+          path: UlubMP3-release-slim.apk
           if-no-files-found: error
           retention-days: 14
